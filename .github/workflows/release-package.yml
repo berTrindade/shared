@@ -24,7 +24,7 @@ jobs:
         uses: EndBug/version-check@v1
         with:
           diff-search: true
-          file-name: components/package.json
+          file-name: ../../components/package.json
           token: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Publish components to GitHub Packages
@@ -33,73 +33,73 @@ jobs:
             env:
               NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
 
-      - name: Check if containers version has been updated
-        id: containers
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
-          file-name: containers/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check if containers version has been updated
+      #   id: containers
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     diff-search: true
+      #     file-name: containers/package.json
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Publish containers to GitHub Packages
-          if: steps.containers.outputs.changed == 'true'
-            run: npm publish containers
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+      #   - name: Publish containers to GitHub Packages
+      #     if: steps.containers.outputs.changed == 'true'
+      #       run: npm publish containers
+      #       env:
+      #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
 
-      - name: Check if hooks version has been updated
-        id: hooks
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
-          file-name: hooks/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check if hooks version has been updated
+      #   id: hooks
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     diff-search: true
+      #     file-name: hooks/package.json
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Publish hooks to GitHub Packages
-          if: steps.hooks.outputs.changed == 'true'
-            run: npm publish scroll-to-top
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+      #   - name: Publish hooks to GitHub Packages
+      #     if: steps.hooks.outputs.changed == 'true'
+      #       run: npm publish scroll-to-top
+      #       env:
+      #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
 
-      - name: Check if services version has been updated
-        id: services
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
-          file-name: services/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check if services version has been updated
+      #   id: services
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     diff-search: true
+      #     file-name: services/package.json
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Publish services to GitHub Packages
-          if: steps.services.outputs.changed == 'true'
-            run: npm publish services
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+      #   - name: Publish services to GitHub Packages
+      #     if: steps.services.outputs.changed == 'true'
+      #       run: npm publish services
+      #       env:
+      #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
 
-      - name: Check if selectors version has been updated
-        id: selectors
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
-          file-name: selectors/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check if selectors version has been updated
+      #   id: selectors
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     diff-search: true
+      #     file-name: selectors/package.json
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Publish selectors to GitHub Packages
-          if: steps.selectors.outputs.changed == 'true'
-            run: npm publish selectors
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+      #   - name: Publish selectors to GitHub Packages
+      #     if: steps.selectors.outputs.changed == 'true'
+      #       run: npm publish selectors
+      #       env:
+      #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
 
-      - name: Check if utils version has been updated
-        id: utils
-        uses: EndBug/version-check@v1
-        with:
-          diff-search: true
-          file-name: utils/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check if utils version has been updated
+      #   id: utils
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     diff-search: true
+      #     file-name: utils/package.json
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Publish utils to GitHub Packages 
-          if: steps.utils.outputs.changed == 'true'
-            run: npm publish utils
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+      #   - name: Publish utils to GitHub Packages 
+      #     if: steps.utils.outputs.changed == 'true'
+      #       run: npm publish utils
+      #       env:
+      #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}
   

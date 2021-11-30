@@ -25,6 +25,6 @@ jobs:
           scope: "@bertrindade"
       - name: Publish to GitHub Packages
         run: |
-          npm publish components
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN }}

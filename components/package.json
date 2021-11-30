@@ -1,6 +1,8 @@
 {
   "name": "@common/components",
   "main": "index.js",
+  "version": "1.0.0",
+  "description": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/berTrindade/shared.git",

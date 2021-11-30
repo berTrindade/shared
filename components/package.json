@@ -1,0 +1,12 @@
+{
+  "name": "@common/components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berTrindade/shared.git",
+    "directory": "components/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

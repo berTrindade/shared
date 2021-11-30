@@ -1,0 +1,12 @@
+{
+  "name": "@common/selectors",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berTrindade/shared.git",
+    "directory": "selectors/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

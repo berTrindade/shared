@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/berTrindade/shared/issues"
   },
-  "homepage": "https://github.com/berTrindade/shared#readme"
+  "homepage": "https://github.com/berTrindade/shared#readme",
+  "dependencies": {
+    "@bertrindade/shared": "1.0.0"
+  }
 }
